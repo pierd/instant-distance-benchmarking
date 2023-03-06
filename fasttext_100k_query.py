@@ -12,7 +12,7 @@ def load_points(path, count=100_000):
     with open(path, 'r') as input_file:
         input_file.readline()   # skip first line
         for _ in range(count):
-            parts = input_file.readline().split()
+            parts = input_file.readline().split(' ')
             words.append(parts[0])
             points.append([float(i) for i in parts[1:]])
     return words, points
